@@ -2,17 +2,17 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab X - Subject/Topic</title>
+	<title>Lab 2 - HTML & CSS STARTER</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="../css/site.css" />
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
-	<link rel="stylesheet" type="text/css" href="css/lab.css">
+	<link rel="stylesheet" type="text/css" href="css/lab.css" />
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -22,30 +22,62 @@
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
-		<section>
-			<h1>Lab X - Subject/Topic</h1>
+		<section class="major-section">
+			<h1>HELLO WORLD</h1>
 			<div class="minor-section">
-					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
+				<h2>a little about me :)</h2>
+				<p>
+					HELLOOO I'm Lyssa and I am a sophomore. I major in CS:GD and like to play small little exploration and narrative games.
+					I like to wear this brown bear hat that is very recognizable. You probably won't see me around campus too much because like every other CS major, I am not fond of grass. 
+					But I think that is valid because the sun is very bright in the afternoon and my eyes cannot take it. I think I got too used to dark mode on VS Code... oops.
+				</p>
+			</div>
+			
+			<div class="minor-section">
+				<h2>a little about my partner :D</h2>
+				<p>
+					Shiyen is a 3rd year art major and she is very cool. She does very pretty arts and always has really pretty nail art. 
+					She can drive a car too. That is very cool. And she likes to go to the beach.
+					Eventhough she says she is boring (I can't believe she just said that D: ), she still does more fun activities than me haha. 
+					Shiyen's laptop is filled with sparkly stickers that go bling bling under the classroom lights.
+					She is new to HTML and she is trying very hard.
+				</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
+					<h2>a little about quantum mechanics B)</h2>
+					<p>
+						The peculiar idea of "quantum engtanglement" is enough to boggle some minds. Perhaps the idea that two quantum particles, no matter the distance,
+						is forever entangled in a state where if one particle changes in some form, the other particle will reflect that. And the worst part? Any measurement of entangled 
+						particles would collapse the whole system. All we might ever know, for now, is that if one particle's spin direction is left, the other must be right. 
+						So given a random quantum particle, the chance of it spinning left is 50%.
+					</p>
 			</div>
 
-			<div class="minor-section">
-					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
-			</div>
-
-			<div class="minor-section">
-					<h2>Results</h2>
-					<div id="output"></div>
-			</div>
 		</section>
-		<nav id="links">
+		<nav id="cat-links"
 			<!-- Put links to other pages (including the homepage) here. -->
+			<!-- ALL CAT IMAGES from Spring 2023 CMPM80K final project -->
+			<a href="../index.html" class="cat-link">
+				<img src="../img/ghostCat_red.png"/>
+				<p>home page</p>
+			</a>
+			<a href="https://en.wikipedia.org/wiki/Quantum_entanglement" class="cat-link">
+				<img src="../img/ghostCat_orange.png"/>
+				<p>engtanglement wiki</p>
+			</a>
+			<a href="https://www.goodreads.com/book/show/46123232-schr-dinger-s-cat" class="cat-link">
+				<img src="../img/ghostCat_grey.png"/>
+				<p>physics book</p>
+			</a>
+			<a href="https://www.goodreads.com/book/show/55801224-helgoland" class="cat-link">
+				<img src="../img/ghostCat_blue.png"/>
+				<p>quantum book</p>
+			</a>
+			<a href="../lab3/index.html" class="cat-link">
+				<img src="../img/ghostCat_purple.png"/>
+				<p>next lab</p>
+			</a>
 		</nav>
 	</main>
 </body>

@@ -2,29 +2,62 @@
 
 /* you can pick your own background colors, text colors, and fonts */
 
+@font-face {
+  font-family: "cattie";
+  src: url("../fonts/cattie.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cute-letters";
+  src: url("../fonts/cute-letters.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "quicksand-regular";
+  src: url("../fonts/quicksand-regular.ttf") format("truetype");
+}
+
 /* we can select an html element tag, in this case "body" will apply to the whole document */
 body {
-  background-color: #50808E;
+  background-color: #1a2d44;
+  display: flex;
+  font-family: "quicksand-regular";
 }
 
 /* we can have rules apply to multiple elements at the same time with commas */
-h1,h2,h3 {
-  font-family: sans-serif;
+h2,h3,h4 {
+  font-family: "cute-letters";
+  font-size: 200%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* and we can have rules that overlap other rules, both take effect */
 h1 {
-  letter-spacing: 5px;
+  font-family: "cattie";
+  letter-spacing: 2px;
   word-spacing: 5px;
-  font-size: 200%;
+  font-size: 450%;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  color: #1a2d44;
+}
+
+p {
+  font-family: "quicksand-regular";
+  font-size: 125%;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
 #content {
   margin: 10px;
   padding: 10px;
-  border: solid 1px #888;
-  background-color: #84B59F;
+  /* border: solid 1px #888; */
+  background-color: #3e5d84;
 }
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
@@ -32,5 +65,34 @@ h1 {
   padding: 10px;
   margin-bottom: 10px;
   border: solid 1px #888;
-  background-color: #A3C9A8;
+  background-color: #739ccf;
+}
+
+/* cat link nav bar */
+#cat-links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+.cat-link img {
+  width: 10vw;
+  min-width: 50px;
+  max-width: 100px;
+  height: auto;
+}
+
+.cat-link p {
+  font-family: "cute-letters";
+  font-size: medium;
+  text-align: center;
+  color: #739ccf;
+}
+
+.cat-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
