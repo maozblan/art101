@@ -5,7 +5,85 @@
   max-width: 500px;
 }
 
-.cat-link p {
+/* sections with main groupings in columns */
+.column-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.var-column-container {
+  column-gap: 5px;
+  overflow: auto;
+}
+
+#selfie {
+  /* float: right; */
+  height: 300px;
+  align-self: flex-end;
+}
+
+/* redoing the nav bar */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px;
+}
+
+#cat-links {
+  flex-direction: column;
+  margin: 5vh;
+}
+
+#cat-links ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0px;
+}
+
+.cat-link>.text-box p, 
+.cat-link>.text-box h2 {
+  margin: 5px;
+  margin-bottom: 2.5px;
+  font-size: 20px;
+  margin-left: 0px;
+  /* font-family: "quicksand-regular"; */
+}
+
+.cat-link>.text-box h2 {
   font-size: 25px;
-  margin-top: 10px;
+}
+
+.cat-link {
+  flex-direction: row;
+  justify-content: left;
+  color: #739ccf;
+}
+
+.light-text {
+  color: #739ccf;
+}
+
+/* variable number of columns via chatGPT */
+@media (max-width: 768px) {
+  .var-column-container {
+    column-count: 1;
+  }
+  #cat-links {
+    margin: 1vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .var-column-container {
+    column-count: 2;
+  }
+}
+@media (min-width: 1025px) {
+  .var-column-container {
+    column-count: 3;
+  }
 }
