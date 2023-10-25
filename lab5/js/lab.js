@@ -22,6 +22,11 @@ let age = 2023 - year[num % year.length];
 
 document.writeln("Hypothetically there is a car from " + make[num % make.length] + " made by " + ran[num % ran.length] + ".<br>");
 document.writeln("The car has the paint color of " + color[num % color.length] + " and is " + age + " years old.<br>");
+
+// update color of car
+console.log(document.getElementById("car_bot"));
+document.getElementById("car_bot").className = color[num % color.length]; 
+
 if (ownIt[num % ownIt.length]) {
   document.writeln("You hypothetically own this car. Isn't that cool?<br>");
 } else {

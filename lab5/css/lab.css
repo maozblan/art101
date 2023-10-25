@@ -3,3 +3,31 @@
 h1 {
   text-align: center;
 }
+
+.img {
+  height: 150px;
+  position: relative;
+}
+
+.img img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+
+.mist {
+  filter: grayscale(100%);
+}
+
+.moonlight {
+  filter: brightness(500%);
+}
+
+.graphite {
+  filter: brightness(0%);
+}
+
+.sundew {
+  filter: none;
+}
