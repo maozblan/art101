@@ -1,9 +1,33 @@
 /* Here we can set styles for this lab page that we don't want to effect others pages */
 
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-.minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
-  }
+h1 {
+  text-align: center;
+}
+
+.img {
+  height: fit-content;
+  position: relative;
+}
+
+.img img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+
+.mist {
+  filter: grayscale(100%);
+}
+
+.moonlight {
+  filter: brightness(500%);
+}
+
+.graphite {
+  filter: brightness(0%);
+}
+
+.sundew {
+  filter: none;
+}
