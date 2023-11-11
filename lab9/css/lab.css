@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+
+#js-link {
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.minor-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-button {
+    align-self: flex-start;
+    background-color: #3e5d84;
+    color: #739ccf;
+    border: 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.toggle {
+    background-color: #1a2d44;
+    color: #739ccf;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
