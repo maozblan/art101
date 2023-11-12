@@ -1,8 +1,8 @@
 /**
- * this is the implmentation for the funky fancy class.
+ * this is the implmentation for the funky fancy class that is toggled on button press.
  *
  * @link   https://maozblan.github.io/art101/lab9/index.html
- * @file   '.special' class implementation.
+ * @file   '.toggle' class implementation.
  * @author Lyssa.
  * @since  09.11.2023
  */
