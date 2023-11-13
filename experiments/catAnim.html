@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>CAT ANIMATION</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+  	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- Include a sitewide CSS file for consistent styling across the site -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<!-- Lab-specifc CSS file for any special styling of this particular page -->
+	<link rel="stylesheet" type="text/css" href="css/catAnim.css">
+	
+	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
+	<script type="text/javascript" src="js/catAnim.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
+	<main id="content">
+		<h1>CAT ANIMATION CONCEPT</h1>
+		<div class="minor-section">
+			<h2>final product</h2>
+			<p>
+				hover over each cat to play the animation!
+				animations are operating individually on loop and will reset when the page is refreshed.
+			</p>
+		</div>
+		<div class="center">
+			<!-- outside minor div for a darker background color -->
+			<canvas class="ghost-cat-anim" data-color="red"></canvas>
+			<canvas class="ghost-cat-anim" data-color="blue"></canvas>
+			<canvas class="ghost-cat-anim" data-color="grey"></canvas>
+		</div>
+		<br />
+		<div class="minor-section">
+			<h2>concept</h2>
+			<p>
+				i wanted to make a gif with semi-transparent cat PNGs from last year's CMPM80K final project. but
+				GIFs that i tried to make online did not keep the translucency so i used requestAnimationFrame to animate
+				it in JS instead.
+			</p>
+			<p>
+				each cat is a 12 frame animation saved into one long PNG file, and i used < canvas > to continously
+				erase and redraw the a section of the PNG picture according to which frame we are on. the following is an example of
+				the full PNG for the red cat:
+			</p>
+			<img id="anim-sample" src="../img/ghostCat_red_anim.png" />
+			<p>
+				since this was to be implemented onto multiple cats on mutliple pages, i stored all the individual animation data
+				inside a JS object (each cat was it's own object too! see the JS code from below) and pulled from the object when animating.
+				since the animation() function cannot take arguments for the requestAnimationFrame() function to work properly,
+				i also had to add an animation wrapper so i could specify which cat object should be animated for the next part.
+			</p>
+			<p>
+				last but not least i wanted each cat to be animated only when hovered over by the mouse so i just added event listeners 
+				for mouseenter and mouseleave tracker to achieve the effect. since each cat was animated individually, the separate storing of
+				animation information per cat was important (see previous paragraph)!
+			</p>
+			<br />
+			<p>
+				tl;dr: i got annoyed at the bad GIF quality for translucent PNGs and decided to code up the animation instead.
+			</p>
+		</div>
+		<div class="minor-section">
+			<h2>code</h2>
+			<p>i hope the code is pretty well commented so it's easily understandable</p>
+			<a href="js/catAnim.js">link to js >></a>
+		</div>
+		<div class="minor-section">
+			<h2>acknowledgements</h2>
+			<p>
+				thank you free code camp for the frame by frame vanilla js animation technique.
+				<a href="https://youtu.be/GFO_txvwK_c">[ LINK ]</a>
+			</p>
+			<p>
+				thank you css tricks for the animation frame technique.
+			</p>
+			<p>
+				thank you professor wes for everything about js and css, esp. jQuery :)
+			</p>
+			<a href="../index.html"><< back to homepage</a>
+		</div>
+		<div class="minor-section">
+			<h2>update log</h2>
+			<p>
+				13 Nov 2023 @ 09:40
+			</p>
+			<p>
+				now i just need to implemented into the final project but i don't really want to edit all the pages by hand (each lab page has 5
+				cats on it... it's going to take days) so i'll find a way to do it with a bash script when i have time :> for now i got to study for my
+				midterm in 1 hour :')
+			</p>
+		</div>
+	</main>
+</body>
+</html>

@@ -1,5 +1,9 @@
 /* this css file will only style the homepage of our site */
 
+h1 {
+  text-align: left;
+}
+
 .cat-photo {
   margin: 10px;
   max-width: 500px;

@@ -1,0 +1,15 @@
+.ghost-cat {
+    border: 1px solid whitesmoke;
+    width: 150px;
+    height: 150px;
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+}
+
+#anim-sample {
+    width: 100%;
+    height: auto;
+}
