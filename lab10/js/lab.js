@@ -34,8 +34,8 @@ function converse() {
     speaker = convo.next();
     text = convo.next();
     if (text.done) {
-        $("#make-convo").toggleClass("hide");
-        $("#restart-convo").toggleClass("hide");
+        $("#make-convo").prop("disabled", true);
+        $("#new-convo").toggleClass("hide");
     }
 }
 
@@ -49,7 +49,7 @@ function onStart() {
         console.log('n');
     }
     if (conversationBank.length == 0) {
-        $("#restart-convo").addClass("hide");
+        $("#new-convo").addClass("hide");
         $("#make-convo").addClass("hide");
         $("#fin-button").removeClass("hide");
         $("#output").append("<p>you have already read all the conversations</p>");
@@ -70,10 +70,10 @@ function onStart() {
 onStart();
 
 $("#make-convo").click(converse);
-$("#restart-convo").click(function() {
+$("#new-convo").click(function() {
     $("#output").empty();
-    $("#make-convo").toggleClass("hide");
-    $("#restart-convo").toggleClass("hide");
+    $("#make-convo").prop("disabled", false);
+    $("#new-convo").toggleClass("hide");
 
     // restart
     onStart();
