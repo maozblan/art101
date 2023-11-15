@@ -1,0 +1,51 @@
+#output {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    border: 2px dotted #3e5d84;
+    padding: 10px;
+}
+
+.button {
+    margin: 20px 0;
+    font-family: inherit;
+    background-color: #3e5d84;
+    color: whitesmoke;
+    border: 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.hide {
+    display: none;
+}
+
+p {
+    margin: 10px;
+}
+
+.text {
+    display: inline-block;
+    width: fit-content;
+    max-width: 60%;
+    margin: 3px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    /* i tried to make it stick to the bottom :( */
+    /* position: sticky; */
+    /* bottom: 0; */
+}
+
+.L-text {
+    background-color: #547093;
+    color: whitesmoke;
+}
+
+.R-text {
+    align-self: flex-end;
+    background-color: #2f4866;
+    color: whitesmoke;
+}
