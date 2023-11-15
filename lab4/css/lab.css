@@ -6,7 +6,7 @@ h1 {
 
 pre {
   padding-left: 10px;
-  background-color: #3e5d84;
+  background-color: var(--med);
   color: white;
   font-family: "Consolas";
 }

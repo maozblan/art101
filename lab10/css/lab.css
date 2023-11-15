@@ -5,14 +5,14 @@
     height: 200px;
     overflow-y: scroll;
     border-radius: 5px;
-    border: 2px dotted #3e5d84;
+    border: 2px dotted var(--med);
     padding: 10px;
 }
 
 .button {
     margin: 20px 0;
     font-family: inherit;
-    background-color: #3e5d84;
+    background-color: var(--med);
     color: whitesmoke;
     border: 0;
     padding: 10px;

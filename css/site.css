@@ -2,6 +2,14 @@
 
 /* you can pick your own background colors, text colors, and fonts */
 
+/* color palette */
+:root {
+  --dark: #1a2d44;
+  --med: #3e5d84;
+  --light: #739ccf;
+}
+
+/* fonts */
 @font-face {
   font-family: "cattie";
   src: url("../fonts/cattie.ttf") format("truetype");
@@ -19,7 +27,7 @@
 
 /* we can select an html element tag, in this case "body" will apply to the whole document */
 body {
-  background-color: #1a2d44;
+  background-color: var(--dark);
   display: flex;
   flex-direction: column;
   font-family: "quicksand-regular";
@@ -41,7 +49,7 @@ h1 {
   font-size: 450%;
   margin-top: 7px;
   margin-bottom: 5px;
-  color: #1a2d44;
+  color: var(--dark);
   text-align: center;
 }
 
@@ -59,14 +67,14 @@ a {
   margin: 10px;
   padding: 10px;
   /* border: solid 1px #888; */
-  background-color: #3e5d84;
+  background-color: var(--med);
 }
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #739ccf;
+  background-color: var(--light);
 }
 
 /* cat link nav bar */
@@ -87,7 +95,7 @@ a {
   font-family: "cute-letters";
   font-size: medium;
   text-align: center;
-  color: #739ccf;
+  color: var(--light);
 }
 
 .cat-link {

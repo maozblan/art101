@@ -64,11 +64,11 @@ h1 {
 .cat-link {
   flex-direction: row;
   justify-content: left;
-  color: #739ccf;
+  color: var(--light);
 }
 
 .light-text {
-  color: #739ccf;
+  color: var(--light);
 }
 
 /* variable number of columns via chatGPT */

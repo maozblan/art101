@@ -14,16 +14,16 @@ h1 {
 
 .toggle-button {
     align-self: flex-start;
-    background-color: #3e5d84;
-    color: #739ccf;
+    background-color: var(--med);
+    color: var(--light);
     border: 0;
     padding: 10px;
     border-radius: 4px;
 }
 
 .toggle {
-    background-color: #1a2d44;
-    color: #739ccf;
+    background-color: var(--dark);
+    color: var(--light);
     flex-direction: column-reverse;
     align-items: flex-end;
 }

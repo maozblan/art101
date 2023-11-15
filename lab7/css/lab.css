@@ -7,9 +7,9 @@ h1 {
 }
 
 #outer {
-    background-color: #3e5d84;
-    color: #739ccf;
-    border: solid 2px #3e5d84;
+    background-color: var(--med);
+    color: var(--light);
+    border: solid 2px var(--med);
     position: relative;
     height: 275px;
     width: 550px;
@@ -21,8 +21,8 @@ h1 {
 }
 
 #inner {
-    background-color: #739ccf;
-    color: #1a2d44;
+    background-color: var(--light);
+    color: var(--dark);
     font-size: 250%;
     position: absolute;
     bottom: 5%;
