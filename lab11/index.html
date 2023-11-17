@@ -17,6 +17,7 @@
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
+	<script type="text/javascript" src="../js/site.js" DEFER></script>
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
 </head>
 <body>
@@ -26,18 +27,23 @@
 			<h1>NAME</h1>
 			<div class="minor-section">
 				<h2>a little about challenging things :)</h2>
-				<p></p>
+				<p>this time we revisted the name stealing code (lab 7) and made it a bit nicer to use :)</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little about my problems :0</h2>
 				<p>
+					Sometimes I feel like I go to pay attention harder so I don't spend 90% of my time on some random
+					idea I just got out of nowhere... such as "isn't this a good time to implement the cat animation?"
+					lo and behold it was not but I did it anyway because monkey brain can't pay attention to what I am
+					supposed to be doing... oops. My apologies :(
 				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little self reflection :D</h2>
 				<p>
+
 				</p>
 			</div>
 
@@ -51,23 +57,23 @@
 			<!-- Put links to other pages (including the homepage) here. -->
 			<!-- ALL CAT IMAGES from Spring 2023 CMPM80K final project -->
 			<a href="../lab10/index.html" class="cat-link">
-				<img src="../img/ghostCat_red.png"/>
+				<canvas class="ghost-cat-anim" data-color="red"></canvas>
 				<p>last lab</p>
 			</a>
 			<a href="" class="cat-link">
-				<img src="../img/ghostCat_orange.png"/>
+				<canvas class="ghost-cat-anim" data-color="orange"></canvas>
 				<p></p>
 			</a>
 			<a href="../index.html" class="cat-link">
-				<img src="../img/ghostCat_grey.png"/>
+				<canvas class="ghost-cat-anim" data-color="grey"></canvas>
 				<p>home page</p>
 			</a>
 			<a href="" class="cat-link">
-				<img src="../img/ghostCat_blue.png"/>
+				<canvas class="ghost-cat-anim" data-color="blue"></canvas>
 				<p></p>
 			</a>
 			<a href="../lab12/index.html" class="cat-link">
-				<img src="../img/ghostCat_purple.png"/>
+				<canvas class="ghost-cat-anim" data-color="purple"></canvas>
 				<p>next lab</p>
 		</nav>
 	</main>

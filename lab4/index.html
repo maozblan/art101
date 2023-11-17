@@ -17,6 +17,7 @@
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
+	<script type="text/javascript" src="../js/site.js" DEFER></script>
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
 </head>
 <body>
@@ -96,23 +97,23 @@
 			<!-- Put links to other pages (including the homepage) here. -->
 			<!-- ALL CAT IMAGES from Spring 2023 CMPM80K final project -->
 			<a href="../lab3/index.html" class="cat-link">
-				<img src="../img/ghostCat_red.png"/>
+				<canvas class="ghost-cat-anim" data-color="red"></canvas>
 				<p>last lab</p>
 			</a>
 			<a href="https://en.wikipedia.org/wiki/Venture_capital" class="cat-link">
-				<img src="../img/ghostCat_orange.png"/>
+				<canvas class="ghost-cat-anim" data-color="orange"></canvas>
 				<p>capital wiki</p>
 			</a>
 			<a href="../index.html" class="cat-link">
-				<img src="../img/ghostCat_grey.png"/>
+				<canvas class="ghost-cat-anim" data-color="grey"></canvas>
 				<p>home page</p>
 			</a>
 			<a href="https://www.penguinrandomhouse.com/books/607128/secrets-of-sand-hill-road-by-scott-kupor-foreword-by-eric-ries/" class="cat-link">
-				<img src="../img/ghostCat_blue.png"/>
+				<canvas class="ghost-cat-anim" data-color="blue"></canvas>
 				<p>finance book</p>
 			</a>
 			<a href="../lab5/index.html" class="cat-link">
-				<img src="../img/ghostCat_purple.png"/>
+				<canvas class="ghost-cat-anim" data-color="purple"></canvas>
 				<p>next lab</p>
 		</nav>
 	</main>
