@@ -33,12 +33,14 @@ $(".ghost-cat-anim").each(function(index) {
     const img = new Image();
     // finding image source, hardcoded :(
     let path = window.location.pathname;
-    if (path.startsWith('/lab')) {
+    console.log("found path:", path);
+    if (path.includes('/lab')) {
       path = '../';
     } else {
       path = '';
     }
     img.src = path + 'img/ghostCat_' + canvas.dataset.color + '_anim.png';
+    console.log("using path:", img.src);
 
     // set up cats dictionary
     cat[index] = {
