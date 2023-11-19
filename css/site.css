@@ -77,13 +77,18 @@ a {
   background-color: var(--light);
 }
 
-/* buttons */
+/* buttons on var(--light) backgrounds only */
 .button {
   background-color: var(--med);
   color: var(--light);
-  border: 0;
+  font-family: inherit;
+  border: 1px solid var(--med);
   padding: 10px;
   border-radius: 4px;
+}
+
+.button:hover {
+  opacity: 70%;
 }
 
 /* cat link nav bar */

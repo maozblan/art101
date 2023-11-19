@@ -1,0 +1,9 @@
+input {
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: inherit;
+    border: 1px solid var(--med);
+    border-radius: 4px;
+    padding: 9px;
+    outline: none;  /* remove glow when selected */
+}
