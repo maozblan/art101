@@ -77,18 +77,19 @@ a {
   background-color: var(--light);
 }
 
+/* buttons */
+.button {
+  background-color: var(--med);
+  color: var(--light);
+  border: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 /* cat link nav bar */
 #cat-links {
   display: flex;
   flex-direction: row;
-  margin-top: 5vh;
-}
-
-.cat-link img {
-  width: 10vw;
-  min-width: 50px;
-  max-width: 100px;
-  height: auto;
 }
 
 .cat-link p {
@@ -96,6 +97,11 @@ a {
   font-size: medium;
   text-align: center;
   color: var(--light);
+}
+
+.cat-link canvas {
+  width: 100px;
+  height: 100px;
 }
 
 .cat-link {
