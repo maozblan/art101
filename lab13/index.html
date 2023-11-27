@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab X - NAME</title>
+	<title>Lab 13 - LOOPS</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="../js/site.js" DEFER></script>
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
@@ -24,27 +24,56 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>NAME</h1>
+			<h1>ROUND AND ROUND</h1>
 			<div class="minor-section">
 				<h2>a little about challenging things :)</h2>
-				<p></p>
+				<p>In this lab we implemented the classic fizzbuzz programming game in javascript!</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little about my problems :0</h2>
 				<p>
+					Nothing much really, just getting things done on time and remembering to turn things in on time.
+					it is the time in the quarter where days just all turn into a mush and I have no idea what is going
+					on anymore.
 				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little self reflection :D</h2>
 				<p>
+					It was really fun! I'm glad we did this in class because I would not have done it in the very smart
+					string concat method. (Although it does just say that on the canvas... now that I have read the again
+					for the second time.)
 				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little about results xD</h2>
 				<p>script output:</p>
+				<table>
+					<tr>
+						<td>Number:</td>
+						<td>Word:</td>
+					</tr>
+					<tr>
+						<td><input type="number" placeholder="3" min="0" max="25" id="num0" /></td>
+						<td><input type="text" placeholder="Fizz" id="word0" /></td>
+					</tr>
+					<tr>
+						<td><input type="number" placeholder="5" min="0" max="25" id="num1" /></td>
+						<td><input type="text" placeholder="Buzz" id="word1" /></td>
+					</tr>
+					<tr>
+						<td><input type="number" min="0" max="25" id="num2" /></td>
+						<td><input type="text" id="word2" /></td>
+					</tr>
+					<tr>
+						<td><input type="number" min="0" max="25" id="num3" /></td>
+						<td><input type="text" id="word3" /></td>
+					</tr>
+				</table>
+				<button class="button" id="submit">submit</button>
 				<div id="output"></div>
 			</div>
 		</section>
@@ -57,7 +86,7 @@
 			</a>
 			<a href="" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="orange"></canvas>
-				<p></p>
+				<p>nothing</p>
 			</a>
 			<a href="../index.html" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="grey"></canvas>
@@ -65,7 +94,7 @@
 			</a>
 			<a href="" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="blue"></canvas>
-				<p></p>
+				<p>nothing</p>
 			</a>
 			<a href="../lab14/index.html" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="purple"></canvas>
