@@ -1,0 +1,8 @@
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#get-newest-comic {
+    margin-left: 5px;
+}

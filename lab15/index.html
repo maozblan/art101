@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab X - NAME</title>
+	<title>Lab 15 - AJAX</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="../js/site.js" DEFER></script>
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
@@ -24,21 +24,29 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>NAME</h1>
+			<h1>TEXTBOOKS BUT BETTER</h1>
 			<div class="minor-section">
 				<h2>a little about challenging things :)</h2>
-				<p></p>
+				<p>
+					This time we are trying to reach an API endpoint using AJAX to grab data for this website.
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little about my problems :0</h2>
 				<p>
+					Didn't have many other than a general lack of time due to it going towards week 10.
+					There's always so many things I want to do for this website and so little time.
 				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>a little self reflection :D</h2>
 				<p>
+					Honestly, kinda disappointed mostly with my work ethic. If it could be any better
+					I could have done so much more this week. The material isn't hard at all (Professor
+					Wes teaches it well), it's just sad I don't have the time to play around with it
+					before the assignments are due.
 				</p>
 			</div>
 
@@ -46,6 +54,11 @@
 				<h2>a little about results xD</h2>
 				<p>script output:</p>
 				<div id="output"></div>
+				<div class="row-container">
+					<button class="button" id="get-comic">get comic</button>
+					<button class="button" id="get-newest-comic">get newest comic</button>
+				</div>
+				<div>all data from XKCD API</div>
 			</div>
 		</section>
 		<nav id="cat-links">
@@ -55,17 +68,17 @@
 				<canvas class="ghost-cat-anim" data-color="red"></canvas>
 				<p>last lab</p>
 			</a>
-			<a href="" class="cat-link">
+			<a href="https://www.amazon.com/What-If-Scientific-Hypothetical-Questions-ebook/dp/B00IYUYF4A" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="orange"></canvas>
-				<p></p>
+				<p>WHAT IF</p>
 			</a>
 			<a href="../index.html" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="grey"></canvas>
 				<p>home page</p>
 			</a>
-			<a href="" class="cat-link">
+			<a href="https://www.amazon.com/How-Absurd-Scientific-Real-World-Problems/dp/0525537090" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="blue"></canvas>
-				<p></p>
+				<p>HOW TO</p>
 			</a>
 			<a href="../lab16/index.html" class="cat-link">
 				<canvas class="ghost-cat-anim" data-color="purple"></canvas>
