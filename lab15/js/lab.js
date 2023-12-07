@@ -24,6 +24,7 @@ $(document).ready(function() {
     });
 });
 
+/*
 // making the button clickable
 $('#get-comic').click(function() {
     // pick a random number from 1 to newest
@@ -57,3 +58,4 @@ function displayComic(comicJSON) {
         .append(`<h2>${comicJSON.safe_title}`)                              // append title
         .append(`<img src="${comicJSON.img}" alt="${comicJSON.alt}">`);     // append img
 }
+*/
