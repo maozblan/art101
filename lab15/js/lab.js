@@ -12,7 +12,7 @@ $(document).ready(function() {
     // get most recent comic for later use
     $.ajax({
         url : "https://xkcd.com/info.0.json",
-        type : "GET",
+        method : "GET",
         dataType : "json",
         success : function(data) {
             jsonData = JSON.parse(JSON.stringify(data));
@@ -24,7 +24,6 @@ $(document).ready(function() {
     });
 });
 
-/*
 // making the button clickable
 $('#get-comic').click(function() {
     // pick a random number from 1 to newest
@@ -34,7 +33,7 @@ $('#get-comic').click(function() {
     let comicPicked;
     $.ajax({
         url : `https://xkcd.com/${randomNum}/info.0.json`,
-        type : "GET",
+        method : "GET",
         dataType : "json",
         success : function(data) {
             comicPicked = JSON.parse(JSON.stringify(data));
@@ -58,4 +57,3 @@ function displayComic(comicJSON) {
         .append(`<h2>${comicJSON.safe_title}`)                              // append title
         .append(`<img src="${comicJSON.img}" alt="${comicJSON.alt}">`);     // append img
 }
-*/
