@@ -79,7 +79,7 @@ function displayPokemon() {
         let pokemon = $(`<div class="pokemon pokemon${i}">`)
             .append(`<img src="${currentPokemon[i].sprites.front_default}" class="hide">`)
             .append(`<input class="guess" type="text" placeholder="guess?">`)
-            .append(`<div class="result">${currentPokemon[i].name}`);
+            .append(`<div class="result">`);
         $("#output").append(pokemon);
     }
 }
