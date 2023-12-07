@@ -10,6 +10,7 @@
 let score = 0;
 let total = 0;
 let currentPokemon = [];
+let seen = [];  // helper to have no duplicates in pokemon
 let pokemonData, totalPokemon;
 
 // it would be nice to have a total count of pokemon that updates when the api gets updated :(
@@ -25,7 +26,21 @@ $("#reload-button").click(function() {
 
 $("#submit-button").click(function() {
     console.log("submitting guesses...");
-    // count score and display results
+    // show pokemon
+    $(".hide").toggleClass("hide");
+    // disable further guessing
+    $(".guess").prop("disabled", true);
+    // count score
+    for (let i = 0; i < currentPokemon.length; ++i) {
+        if ($(`.pokemon${i} input`).val().toLowerCase() == currentPokemon[i].name) {
+            score++;
+            $(`.pokemon${i} .result`).html("yay!");
+        } else {
+            $(`.pokemon${i} .result`).html(currentPokemon[i].name);
+        }
+    }
+    // display updated score
+    total += currentPokemon.length;
     updateScore();
 });
 
@@ -41,9 +56,9 @@ $("#reset-button").click(function() {
 
 function updateScore() {
     if (total) {
-        $(".score").html(`current score : ${score}/${total}  ${(100*score/total).toFixed(2)}%`);
+        $(".score").html(`current score : ${score}/${total}   ${(100*score/total).toFixed(2)}%`);
     } else {
-        $(".score").html("play one round first!");
+        $(".score").html(`current score : ${score}/${total}   N/A`);
     }
 }
 
@@ -59,53 +74,40 @@ function getPokemonCount() {
 function displayPokemon() {
     // display all fetched pokemons
     console.log("displaying pokemon...");
-    console.log(currentPokemon);
+    $("#output").empty();
     for (let i = 0; i < currentPokemon.length; ++i) {
-        let pokemon = $("<div>").data('index', i);
-        pokemon
-            .append("<img>", {
-                src : currentPokemon[i].sprites.front_default
-            })
-            .append("<input>", {
-                class : "guess",
-                type : "text"
-            })
-            .append("<div>", {
-                class : "result"
-            });
+        let pokemon = $(`<div class="pokemon pokemon${i}">`)
+            .append(`<img src="${currentPokemon[i].sprites.front_default}" class="hide">`)
+            .append(`<input class="guess" type="text" placeholder="guess?">`)
+            .append(`<div class="result">${currentPokemon[i].name}`);
         $("#output").append(pokemon);
     }
 }
 
-function selectPokemon(num) {
+// needs to be async so the while loop doesn't continue execution BEFORE ajax success finishes
+// with help from google bard
+async function selectPokemon(num) {
     console.log("pokemon count received", num);
-    let seen = [];
-    let i = 0;
-    do {
+    currentPokemon = []; // reset current pokemon to get new ones
+    seen = [];
+    while (1) {
         let pokemonNum = Math.floor(Math.random() * (pokemonCount-1) + 1);
-        $.ajax({
-            url : `https://pokeapi.co/api/v2/pokemon/${pokemonNum}`,
-            method : "GET",
-            dataType : "json",
-            success : function(data) {
-                if (!seen.includes(data.name)) {
-                    currentPokemon.push(data);
-                    seen.push(data.name);
-                }
-                console.log(seen, currentPokemon.length, currentPokemon <= num);
-                if (currentPokemon.length <= num) { // enough pokemon fetched
-                    displayPokemon();
-                }
-            },
-            error : function(jqXHR, textStatus, errorThrown) {
-                console.log(pokemonNum);
-                console.log("Error:", textStatus, errorThrown);
+        try {
+            let data = await $.ajax({
+                url : `https://pokeapi.co/api/v2/pokemon/${pokemonNum}`,
+                method : "GET",
+                dataType : "json"
+            });
+            if (!seen.includes(data.name)) {
+                currentPokemon.push(data);
+                seen.push(data.name);
             }
-        });
-        if (i > 10){
-            break;
-        }
-        i++;
-        console.log(currentPokemon.length < num);
-    } while (currentPokemon.length < num);
+            if (currentPokemon.length >= num) { // enough pokemon fetched
+                displayPokemon();
+                break;
+            }
+        } catch (error) {
+            console.log(error);
+        }   
+    }
 }

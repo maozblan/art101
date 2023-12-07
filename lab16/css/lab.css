@@ -7,3 +7,24 @@ input {
     padding: 9px;
     outline: none;  /* remove glow when selected */
 }
+
+#output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* each pokemon box */
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+/* blackout effect for the pokemon guessing phase */
+.hide {
+    filter: brightness(0%);
+}
